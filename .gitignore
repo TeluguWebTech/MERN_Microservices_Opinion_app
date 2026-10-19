@@ -1,0 +1,17 @@
+
+# Ignore dependencies in every service
+node_modules/
+
+
+# Ignore build output
+dist/
+build/
+coverage/
+
+# Ignore logs
+*.log
+npm-debug.log*
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

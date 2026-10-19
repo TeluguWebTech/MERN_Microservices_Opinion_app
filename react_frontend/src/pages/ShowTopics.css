@@ -1,0 +1,166 @@
+Main topics section
+.topicSection {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 20px 24px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* Individual topic card */
+.topicRecord {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    padding: 28px;
+
+    background: linear-gradient(145deg, #ffffff, #f8faff);
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Card hover */
+.topicRecord:hover {
+    transform: translateY(-6px);
+    border-color: #a5b4fc;
+    box-shadow: 0 15px 32px rgba(79, 70, 229, 0.12);
+}
+
+/* Topic title */
+.topicRecord h2 {
+    width: 100%;
+    margin: 0 0 16px;
+
+    color: #1e293b;
+    font-size: 22px;
+    font-weight: 750;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+/* Topic description */
+.topicRecord p {
+    margin: 0 0 26px;
+
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+
+    flex-grow: 1;
+}
+
+/* Action buttons container */
+.seeOps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Remove default Link decoration */
+.seeOps a {
+    flex: 1 1 130px;
+    min-width: 0;
+    text-decoration: none;
+}
+
+/* Buttons */
+.seeOps button {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 14px;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.4;
+
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border: none;
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+/* Button hover */
+.seeOps button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.25);
+}
+
+/* Keyboard accessibility */
+.seeOps a:focus-visible,
+.seeOps button:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 4px;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+    .topicSection {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .topicRecord {
+        padding: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .topicSection {
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+        padding: 14px 18px;
+        gap: 18px;
+    }
+
+    .topicRecord {
+        padding: 23px;
+        border-radius: 14px;
+    }
+
+    .topicRecord h2 {
+        font-size: 20px;
+    }
+
+    .topicRecord p {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    .seeOps {
+        flex-direction: column;
+    }
+
+    .seeOps a {
+        flex: auto;
+        width: 100%;
+    }
+
+    .seeOps button {
+        min-height: 46px;
+        font-size: 14px;
+    }
+}

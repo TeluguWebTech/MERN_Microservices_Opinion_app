@@ -1,0 +1,127 @@
+/* Overall page */
+.singleTopicPage {
+    width: min(850px, calc(100% - 36px));
+    margin: 35px auto 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+}
+
+/* Topic heading */
+.topicHeader {
+    margin-bottom: 30px;
+    padding: 25px 28px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+}
+
+.topicHeader h1 {
+    margin: 0;
+    color: #172554;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+/* Section headings */
+.sectionHeading {
+    margin: 0 0 18px;
+    color: #1e293b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Opinions list */
+/* Centered opinions section */
+.commSection {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto 35px;
+    box-sizing: border-box;
+}
+
+/* Opinion card */
+.commRecord {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+    transition: border-color 0.2s ease;
+}
+
+.commRecord:hover {
+    border-color: #b8c7e0;
+}
+
+/* Username */
+.commRecord > div:first-child {
+    margin-bottom: 9px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Opinion message */
+.commRecord > div:nth-child(2) {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .commSection {
+        margin-top: 18px;
+        gap: 12px;
+    }
+
+    .commRecord {
+        padding: 17px;
+    }
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 600px) {
+    .singleTopicPage {
+        width: calc(100% - 28px);
+        margin: 22px auto 35px;
+    }
+
+    .topicHeader {
+        padding: 19px;
+        margin-bottom: 25px;
+    }
+
+    .topicHeader h1 {
+        font-size: 23px;
+    }
+
+    .sectionHeading {
+        font-size: 18px;
+    }
+
+    .commRecord {
+        padding: 16px;
+    }
+
+    .postComm {
+        padding: 18px;
+    }
+
+    .postComm button {
+        width: 100%;
+    }
+}

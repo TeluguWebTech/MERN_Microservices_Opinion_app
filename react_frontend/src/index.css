@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.topicSection {
+  border: 1px solid gray;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px;
+}
+.topicRecord{
+  border: 1px solid gray;
+  height: 240px;
+  padding: 50px;
+  border-radius: 20px;
+}
+.topicRecord p{
+  margin-top: 20px;
+}
+.seeOps{
+  display: flex;
+  gap: 10px;
+}
+.seeOps button{
+  margin-top: 20px;
+  padding: 5px 15px;
+}
+.commSection{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3,1fr);
+  padding: 20px 100px;
+}
+.commRecord{
+  border: 1px solid gray;
+  height: 100px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.postComm{
+  
+  text-align: center;
+}
+.postComm input{
+  width: 40%;
+  text-align: center;
+  height: 30px;
+}
+
+/* Main page */
+.commSection {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 10px 20px;
+}
+
+/* Topic title */
+h1 {
+    max-width: 900px;
+    margin: 40px auto 25px;
+    padding: 22px 28px;
+    color: #1e293b;
+    font-size: 32px;
+    font-weight: 750;
+    line-height: 1.4;
+    border-left: 6px solid #6366f1;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+/* Individual opinion card */
+.commRecord {
+    margin-bottom: 18px;
+    padding: 22px 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow-wrap: anywhere;
+}
+
+.commRecord:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.09);
+}
+
+/* Username */
+.commRecord .userName {
+    margin-bottom: 12px;
+    color: #4f46e5;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Opinion message */
+.commRecord > div:last-child {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+/* Comment form container */
+.postComm {
+    max-width: 850px;
+    margin: 35px auto 50px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+}
+
+/* Username input */
+.postComm input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    color: #1e293b;
+    font-size: 15px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.postComm input[type="text"]:focus,
+.postArea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* Opinion textarea */
+.postArea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 160px;
+    box-sizing: border-box;
+    padding: 16px;
+    color: #1e293b;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.7;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Submit button */
+.postComm button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 24px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 650;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.postComm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(79, 70, 229, 0.3);
+}
+
+.postComm button:active {
+    transform: translateY(0);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    h1 {
+        margin: 24px 16px;
+        padding: 18px;
+        font-size: 25px;
+    }
+
+    .commSection {
+        margin: 20px auto;
+        padding: 0 16px;
+    }
+
+    .commRecord {
+        padding: 18px;
+    }
+
+    .postComm {
+        margin: 25px 16px 35px;
+        padding: 20px;
+    }
+
+    .postArea {
+        min-height: 130px;
+    }
+
+    .postComm button {
+        width: 100%;
+    }
+}
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 3px 15px rgba(15, 23, 42, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container */
+.navbar-container {
+    max-width: 1200px;
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logo */
+.navbar-logo {
+    color: #1e293b;
+    font-size: 26px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -0.8px;
+}
+
+.navbar-logo span {
+    color: #6366f1;
+}
+
+/* Navigation links */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-link {
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+    color: #6366f1;
+}
+
+/* Logout button */
+.navbar-logout {
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #6366f1, #7c3aed);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar-logout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(99, 102, 241, 0.25);
+}
+
+.navbar-logout:active {
+    transform: translateY(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .navbar-container {
+        min-height: 65px;
+        padding: 0 14px;
+        gap: 12px;
+    }
+
+    .navbar-logo {
+        font-size: 22px;
+    }
+
+    .navbar-links {
+        gap: 13px;
+    }
+
+    .navbar-link {
+        font-size: 13px;
+    }
+
+    .navbar-logout {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+}
